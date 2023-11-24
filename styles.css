@@ -1,0 +1,88 @@
+
+html,
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+.container {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+}
+
+section {
+  background-size: cover;
+  color: white;
+  background-color: var(--bg, --color-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5rem;
+
+  &.image {
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: cover;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+    height: 100vh;
+  }
+  &.text {
+    height: 50vh;
+    padding: 10px 10rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+  &.heading {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px) scale(1.5);
+    line-height: 2rem;
+    color: hotpink;
+    opacity: 50%;
+  }
+  &.heading1 {
+    z-index: -1;
+    transform: translateY(-30vh) translateZ(1px);
+    font-size: 3rem;
+    padding: 0px 20rem;
+    padding-top: -6rem;
+    padding-bottom: -6rem;
+    line-height: 5rem;
+    color: white;
+  }
+}
+.icon{
+    z-index: 10;
+    position: fixed ;
+    top: 2rem;
+    left: 5rem;
+    width: 5%;
+    display: none;
+}
+.home_icon{
+    z-index: 10;
+    position: fixed ;
+    top: 2rem;
+    left: 5rem;
+    width: 5%;
+}
+
+
+.footer {
+  position: relative;
+  display: block;
+  background-color: black;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  h3{
+    font-weight: normal; 
+    color: var(--color-blue);
+  }
+}
